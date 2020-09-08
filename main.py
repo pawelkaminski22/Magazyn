@@ -1,7 +1,8 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+user_input = ''
+items = [{'Name': 'Milk', 'Quantity': 120, 'Unit': 'l', 'Unit Price (PLN)': 2.3},
+         {'Name': 'Sugar', 'Quantity': 1000, 'Unit': 'Kg', 'Unit Price (PLN)': 3},
+         {'Name': 'Flour', 'Quantity': 12000, 'Unit': 'Kg', 'Unit Price (PLN)': 1.2}
+         ]
 
 
 def print_hi(name):
@@ -9,8 +10,8 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    while user_input != 'exit':
+        user_input = input('What would you like to do?')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print('Exiting... Bye')
