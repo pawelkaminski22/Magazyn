@@ -73,9 +73,9 @@ def export_sales_to_csv():
     print('Sales saved')
 
 
-def load_items_from_csv():
+def load_items_from_csv(path):
     items.clear()
-    with open('Magazyn.csv', newline='') as csvfile:
+    with open(path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             items.append(row)
@@ -83,6 +83,9 @@ def load_items_from_csv():
 
 
 if __name__ == '__main__':
+    user_input = input('Enter path to Input File: ')
+    load_items_from_csv(user_input)
+
     while user_input != 'exit':
         user_input = input('What would you like to do?')
         if user_input == 'show':
@@ -102,6 +105,6 @@ if __name__ == '__main__':
             export_sales_to_csv()
 
         elif user_input == 'load':
-            load_items_from_csv()
+            load_items_from_csv('Magazyn.csv')
 
     print('Exiting... Bye')
